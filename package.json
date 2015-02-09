@@ -1,0 +1,29 @@
+{
+  "name": "visual-regression-tester",
+  "version": "0.0.1",
+  "description": "Matcher and reporter for jasmine 2.x to compare screenshots and report differences. It is designed to be used with protractor and jasmine for CSS regression tests.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Neochic/visual-regression-tester.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "Jasmine",
+    "Protractor",
+    "CSS",
+    "regression",
+    "javascript",
+    "test",
+    "Screenshot"
+  ],
+  "author": "Christoph Stickel <christoph@neochic.de>",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "pngjs": "^0.4.0",
+    "q": "^1.1.2"
+  }
+}
