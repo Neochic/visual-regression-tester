@@ -60,10 +60,10 @@ var completedPromises = [];
 
 module.exports = {
     specDone: function(result) {
-        var deferred = Q.defer();
-        completedPromises.push(deferred.promise);
-
         result.failedExpectations.forEach(function(exp) {
+            var deferred = Q.defer();
+            completedPromises.push(deferred.promise);
+
             if(exp.matcherName !== 'toLookLike') {
                 return;
             }
