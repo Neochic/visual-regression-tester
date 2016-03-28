@@ -1,5 +1,4 @@
 var config = require('./config.js');
-var Q = require('q');
 
 function getSectionSuffix() {
     var section = config.get().section;
@@ -7,17 +6,12 @@ function getSectionSuffix() {
 }
 
 function getBrowserSubdir() {
-    var deferred = Q.defer();
-
-    if (!browser || typeof browser.getCapabilities !== 'function') {
-        deferred.resolve('');
-    } else {
-        browser.getCapabilities().then(function (capabilities) {
-            deferred.resolve([capabilities.caps_.platform, capabilities.caps_.browserName, capabilities.caps_.version].join('-') + '/');
-        });
+    var capabilities = config.get().capabilities;
+    if (!capabilities || typeof capabilities.get !== "function") {
+        return "default/";
     }
 
-    return deferred.promise;
+    return [capabilities.get("platform"), capabilities.get("browserName"), capabilities.get("version")].join('-') + '/';
 }
 
 function getFixturePathByName(name) {

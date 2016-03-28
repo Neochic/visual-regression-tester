@@ -2,6 +2,7 @@ var fs = require('fs');
 var utils = require('./utils');
 
 function toLookLike() {
+
     var compare = function (actual, expected) {
         var result = {
             pass: null,
