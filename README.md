@@ -40,9 +40,9 @@ return deferred.promise;
 ```
 
 ## Possible config variables
-|variable|type|default|description
-|-|-|-|-|
-|results|string|'test-results/css-regression/'|Path for tested screens.|
-|data|string|'test/css-regression/fixtures/'|Fixture path with data to compare to.|
-|section|string|''|Additional suffix to add to filename before file extension.|
-|capabilities|capabilities|null|Capabilities to get browser information from.| 
+| variable | type | default | description |
+| --- | --- | --- | --- |
+| results | string  | ```'test-results/css-regression/'``` | Path for tested screens. |
+| data| string | ```'test/css-regression/fixtures/'``` | Fixture path with data to compare to. |
+| section | string | ```''``` | Additional suffix to add to filename before file extension. |
+| capabilities | capabilities | ```null``` | Capabilities to get browser information from. | 
